@@ -1560,6 +1560,14 @@ logic_tricks = {
                     Hover Boots can again be used to obtain the Token,
                     all without Hookshot or Boomerang.
                     '''},
+ 'Ice Cavern Rupee With No Additional Items': {
+        'name'    : 'logic_ice_rupee',
+        'tags'    : ("Ice Cavern", "Rupee", "Vanilla Dungeons", "Adult", "Child"),
+        'tooltip' : '''\
+                    The Rupee in red ice can
+                    be collected without Blue Fire
+                    with a precise backflip
+                    '''},
     'Ice Cavern MQ Red Ice GS without Song of Time': {
         'name'    : 'logic_ice_mq_red_ice_gs',
         'tags'    : ("Ice Cavern MQ", "Gold Skulltulas", "Master Quest", "Adult",),
@@ -3068,16 +3076,13 @@ setting_infos = [
         name           = 'keyring_give_bk',
         gui_text       = 'Key Rings give Boss Keys',
         gui_tooltip    = '''\
-            Boss Keys will be included in the Key Ring for the specific dungeon.
+            Boss Keys will be included in the Key Ring for the specific dungeon. (if Random Keyrings Enabled, Select where you want remaining Boss Keys shuffled)
         ''',
         default        = False,
         shared         = True,
         gui_params     = {
             "hide_when_disabled": True,
-        },
-        disable={
-            True: {'settings' : ['shuffle_bosskeys']},
-        },
+         },
     ),
     Combobox(
         name           = 'shuffle_mapcompass',
